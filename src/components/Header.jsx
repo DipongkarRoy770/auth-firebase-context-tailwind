@@ -15,22 +15,24 @@ const Header = () => {
   }
   return (
     <nav>
-      <div className="navbar bg-neutral text-neutral-content">
-        <a className="btn btn-ghost normal-case text-xl">Auth master</a>
-        <Link className="btn btn-ghost normal-case text-xl" to="/">
+      <div className="">
+        <Link className=" text-xl" to="/">
           Home
         </Link>
-        <Link className="btn btn-ghost normal-case text-xl" to="/login">
+        {
+          user ?
+        <Link className=" text-xl" to="/register">
+          Register </Link>:
+          <Link className="text-xl" to="/login">
           Login
         </Link>
-        <Link className="btn btn-ghost normal-case text-xl" to="/register">
-          Register
-        </Link>
-        <Link className="btn btn-ghost normal-case text-xl" to="/orders">
+        }
+       
+        <Link className=" text-xl" to="/orders">
           Orders
         </Link>
         {user &&
-          <Link className="btn btn-ghost normal-case text-xl" to="/profile">
+          <Link className=" text-xl" to="/profile">
             profile
           </Link>
         }
@@ -38,10 +40,11 @@ const Header = () => {
           <>
             <span>{user.email}</span>
 
-            <button onClick={handleSingOut}>SignOut</button>
+            <Link onClick={handleSingOut}>SignOut</Link>
           </>
         ) : (
-          <Link to="/login">Login</Link>
+          
+          <Link to="/register">Register</Link>
         )}
       </div>
     </nav>
