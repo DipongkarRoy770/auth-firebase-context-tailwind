@@ -33,7 +33,7 @@ const Register = () => {
       });
   };
   return (
-    <div className="mx-auto w-5/12 h-fit bg-purple-200 rounded">
+    <div className="mx-auto w-full md:w-5/12 h-fit bg-purple-200 rounded">
     <h5 className="text-center pt-6 text-2xl">Please Register Now</h5>
     <form
       onSubmit={handleRegister}

@@ -13,7 +13,6 @@ const PrivateRouter = ({ children }) => {
   }
   return<Navigate to="/login" replace={true}></Navigate>
 
-  //  <Navigate to ="/profile" replace={true}></Navigate>
  
 };
 
