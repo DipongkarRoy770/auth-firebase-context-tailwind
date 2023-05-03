@@ -22,7 +22,7 @@ const Header = () => {
         </Link>
         {user ? (
           <Link className=" text-2xl font-semibold mr-2" to="/register">
-            Register{" "}
+            Register
           </Link>
         ) : (
           <Link className="text-2xl font-semibold mr-2" to="/login">
@@ -30,8 +30,8 @@ const Header = () => {
           </Link>
         )}
 
-        <Link className=" text-2xl font-semibold mr-2" to="/orders">
-          Orders
+        <Link className=" text-2xl font-semibold mr-2" to="/blog">
+         Blog
         </Link>
         {/* {user &&
           <Link className=" text-2xl font-semibold" to="/profile">
